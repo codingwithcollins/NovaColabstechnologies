@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="Web Development, Website, UI/UX Design">
+    <meta name="description" content="NovaColabs - Elevate your digital presence with innovative web solutions.">
+    <meta name="author" content="NovaColabs">
+    <title>NovaColabs Web Solutions</title>
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portf.css">
+
+    <style>
+       
+
+        /* Responsive Navbar */
+        .nav__menu__btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+      
+
+        @media (max-width: 768px) {
+            .nav__links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #fff;
+                width: 100%;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            .nav__links.show {
+                display: flex;
+            }
+
+            .nav__menu__btn {
+                display: block;
+            }
+            .nav__links li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+            
+        }
+        .blog-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.tech-icons .fa {
+    font-size: 24px; /* Adjust size */
+    color: #ffd700; /* Gold color for stars */
+    margin: 0 5px; /* Spacing between stars */
+}
+
+.tech-icons .fa-star-o {
+    color: #ccc; /* Color for empty star */
+}
+
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <nav class="nav">
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="#" class="logo" aria-label="NovaColabs Logo">
+                    <img src="images/logo.png" alt="NovaColabs Logo" style="width: 140px; height: auto;">
+                </a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="btn primary-btn" href="#contact" aria-label="Get in Touch Button">Get in Touch</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="section__container hero__container" id="home">
+  <div class="hero__content">
+    <h1 class="bounce">Empower Your <span>Digital Presence</span> with NovaColabs</h1>
+    <p class="bounce">Your Digital Partner in Nairobi, Kenya</p>
+    <a href="#services" class="btn bounce">Explore Services</a>
+  </div>
+  <div class="hero__image">
+    <div class="image bounce">
+      <img src="images/header-novacolabs.png" alt="NovaColabs Hero" />
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section id="benefits" class="py-5 bg-light fade-in">
+    <div class="container">
+        <div class="section-title text-center mb-4">
+            <h2>Benefits of Having a Website</h2>
+            <p>Here’s why your business needs a website:</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-chart-line fa-3x text-success mb-3"></i> <!-- Changed to green -->
+                <h5>Increased Visibility</h5>
+                <p>Your business will be accessible 24/7 to customers worldwide.</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
+                <h5>Build Credibility</h5>
+                <p>A professional website establishes trust and authenticity.</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-shopping-cart fa-3x text-warning mb-3"></i> <!-- Changed to yellow -->
+                <h5>Boost Sales</h5>
+                <p>Expand your market and increase revenue through online sales.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Deals Section -->
+<section id="deals" class="deals-section py-5 slide-in">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Our Deals</h2>
+            <p>Exclusive offers to enhance your digital presence.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-12 mb-3">
+                <div class="deal-item text-center p-4 shadow-sm">
+                    <h3>Exclusive Website Deal</h3>
+                    <p>Get a professionally designed website at an unbeatable price!</p>
+                    <a href="#contact" class="btn btn-primary">Get This Deal</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mb-3">
+                <div class="deal-item text-center p-4 shadow-sm">
+                    <h3>Digital Marketing Boost</h3>
+                    <p>Enhance your online presence with our premium marketing services.</p>
+                    <a href="#contact" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="deal-item text-center p-4 shadow-sm">
+                    <h3>UI/UX Design Special</h3>
+                    <p>Upgrade your user experience with cutting-edge design solutions.</p>
+                    <a href="#contact" class="btn btn-primary">Explore Options</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section id="why-choose-us" class="py-5 bg-light fade-in">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Why Choose Us?</h2>
+            <p>At NovaColabs, we don’t just create; we innovate, elevate, and transform. Whether it’s designing user-centric products or engineering scalable software, we’re committed to driving success for our clients.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-lightbulb fa-3x text-warning mb-3"></i> <!-- Changed to yellow -->
+                <h5>Innovative Solutions</h5>
+                <p>We bring fresh ideas and innovative solutions to every project, ensuring your business stays ahead of the curve.</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-users fa-3x text-info mb-3"></i> <!-- Changed to blue -->
+                <h5>User-Centric Design</h5>
+                <p>Our designs are focused on providing the best user experience, making your products more engaging and effective.</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-cogs fa-3x text-success mb-3"></i> <!-- Changed to green -->
+                <h5>Scalable Engineering</h5>
+                <p>We build scalable and robust software solutions that grow with your business, ensuring long-term success.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services py-5 zoom-in">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Our Services</h2>
+            <p>We offer top-notch services to boost your digital presence.</p>
+        </div>
+        <div class="row">
+            <!-- Web Development -->
+            <div class="service-item d-flex align-items-center">
+                <div class="text-content">
+                    <h3>Web Development</h3>
+                    <p>Build dynamic, responsive websites tailored to your needs.</p>
+                    <a href="#contact" class="btn">Learn More</a>
+                </div>
+                <div class="image-content">
+                    <img src="images/web-development.jpeg" alt="Web Development" class="img-fluid">
+                </div>
+            </div>
+            <!-- Digital Marketing -->
+            <div class="service-item d-flex align-items-center flex-row-reverse">
+                <div class="text-content">
+                    <h3>Digital Marketing</h3>
+                    <p>Boost your brand visibility with targeted strategies.</p>
+                    <a href="#contact" class="btn">Explore Options</a>
+                </div>
+                <div class="image-content">
+                    <img src="images/digital-marketing.jpg" alt="Digital Marketing" class="img-fluid">
+                </div>
+            </div>
+            <!-- UI/UX Design -->
+            <div class="service-item d-flex align-items-center">
+                <div class="text-content">
+                    <h3>UI/UX Design</h3>
+                    <p>Deliver seamless and engaging experiences to your users.</p>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+                <div class="image-content">
+                    <img src="images/ui-ux-design.jpg" alt="UI/UX Design" class="img-fluid">
+                </div>
+            </div>
+            <!-- Graphic Design -->
+            <div class="service-item d-flex align-items-center flex-row-reverse">
+                <div class="text-content">
+                    <h3>Graphic Design</h3>
+                    <p>Create visually stunning graphics that captivate your audience.</p>
+                    <a href="#contact" class="btn">Discover More</a>
+                </div>
+                <div class="image-content">
+                    <img src="images/graphic-design.jpg" alt="Graphic Design" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="services.html" class="btn primary-btn">View All Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio py-5 fade-in">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Our Work</h2>
+            <p>Take a look at some of our recent projects.</p>
+        </div>
+      
+        <div class="owl-carousel">
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="images/portfolio2.jpg" alt="Project 1" class="img-fluid">
+                    <div class="portfolio-overlay">
+                        <a href="https://codingwithcollins.github.io/portfolio/" target="_blank" class="view-website-btn">View </a>
+                    </div>
+                </div>
+                <h3 class="mt-3 text-center">NovaCarHire</h3>
+                <p class="text-center">NovaCarHire is a platform for renting cars </p>
+                <div class="tech-icons text-center">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star-half-alt"></span>
+                    <span class="fa fa-star-o"></span>
+                </div>
+                
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="images/portfolio1.png" alt="Project 2" class="img-fluid">
+                    <div class="portfolio-overlay">
+                        <a href="https://codingwithcollins.github.io/portfolio/" target="_blank" class="view-website-btn">View </a>
+                    </div>
+                </div>
+                <h3 class="mt-3 text-center">NovaLearn</h3>
+                <p class="text-center">NovaLearn is an online learning management system (LMS)</p>
+                <div class="tech-icons text-center">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star-half-alt"></span>
+                    <span class="fa fa-star-o"></span>
+                </div>
+                
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="images/portfolio1.png" alt="Project 2" class="img-fluid">
+                    <div class="portfolio-overlay">
+                        <a href="https://codingwithcollins.github.io/portfolio/" target="_blank" class="view-website-btn">View </a>
+                    </div>
+                </div>
+                <h3 class="mt-3 text-center">NovaLearn</h3>
+                <p class="text-center">NovaLearn is an online learning management system (LMS)</p>
+                <div class="tech-icons text-center">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star-half-alt"></span>
+                    <span class="fa fa-star-o"></span>
+                </div>
+                
+            </div>
+        <div class="text-center mt-4">
+            <a href="portfolio.html" class="btn primary-btn">View Full Portfolio</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-5 bg-light slide-in">
+    <div class="container">
+        <div class="section-title text-center mb-4">
+            <h2>What Our Clients Say</h2>
+            <p>Hear from some of our satisfied clients.</p>
+        </div>
+        <div class="row">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-item text-center p-4 shadow-sm bg-white">
+                    <img src="images/customer1.jpg" alt="Customer 1" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                    <h5>James Mwangi</h5>
+                    <p class="text-muted">freelancer</p>
+                    <p>"Their service was exceptional, and our website has never looked better!"</p>
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-item text-center p-4 shadow-sm bg-white">
+                    <img src="images/customer2.jpg" alt="Customer 2" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                    <h5>Ezekiel Mutinda</h5>
+                    <p class="text-muted">Mzungu Mweusi Sounds</p>
+                    <p>"The team delivered on time and exceeded our expectations. Highly recommended!"</p>
+                </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-item text-center p-4 shadow-sm bg-white">
+                    <img src="images/customer3.jpg" alt="Customer 3" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                    <h5>Juliet Kathini</h5>
+                    <p class="text-muted">C.E.O JJ poultry farm</p>
+                    <p>"Their digital marketing strategies have significantly boosted our online presence."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about py-5 zoom-in">
+    <div class="container text-center">
+        <h2>About Us</h2>
+        <p>NovaColabs is a team of passionate digital experts dedicated to helping businesses thrive online.</p>
+        <p>We specialize in delivering top-notch digital solutions for businesses of all sizes.</p>
+    </div>
+</section>
+<!-- Blog Section -->
+<section id="blog" class="py-5 fade-in">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Our Blog</h2>
+            <p>Stay updated with the latest insights on the importance of having a website for your business.</p>
+        </div>
+        <div class="row">
+            <!-- Blog Item 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="blog-item p-4 shadow-sm">
+                    <div class="blog-image">
+                        <img src="images/blog-1.jpg" alt="Why Every Business Needs a Website" class="img-fluid rounded">
+                    </div>
+                    <h3 class="mt-3">Why Every Business Needs a Website</h3>
+                    <p>Discover the key reasons why having a website is crucial for your business success in today's digital age.</p>
+                    <a href="blog-post-1.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <!-- Blog Item 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="blog-item p-4 shadow-sm">
+                    <div class="blog-image">
+                        <img src="images/blog-2.jpeg" alt="Top Benefits of Having a Business Website" class="img-fluid rounded">
+                    </div>
+                    <h3 class="mt-3">Top Benefits of Having a Business Website</h3>
+                    <p>Learn about the numerous benefits that a well-designed website can bring to your business.</p>
+                    <a href="blog-post-2.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <!-- Blog Item 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="blog-item p-4 shadow-sm">
+                    <div class="blog-image">
+                        <img src="images/blog-3.jpeg" alt="How to Optimize Your Website for Better Performance" class="img-fluid rounded">
+                    </div>
+                    <h3 class="mt-3">How to Optimize Your Website for Better Performance</h3>
+                    <p>Get tips and strategies on how to optimize your website to improve its performance and user experience.</p>
+                    <a href="blog-post-3.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Expanded FAQ Section -->
+<section id="faqs" class="py-5 slide-in" style="background-color: #f0f8ff;">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Frequently Asked Questions</h2>
+            <p>Answers to your common queries.</p>
+        </div>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        Why do I need a website for my business?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        A website helps you establish credibility, reach more customers, and operate 24/7.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        How much does a website cost?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        The cost varies depending on the design, features, and functionality. Contact us for a custom quote.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        How long does it take to build a website?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        The timeline depends on the complexity of the project. Most websites are completed within 2-4 weeks.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                        What services do you offer?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        We offer web development, digital marketing, UI/UX design, and more. Visit our services page for details.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                        How can I get a quote for my project?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        You can get a quote by filling out our contact form with your project details. We will get back to you with a custom quote.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact py-5 fade-in">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Contact Us</h2>
+            <p>We’d love to hear about your project.</p>
+        </div>
+        <form 
+            action="https://api.web3forms.com/submit" 
+            method="POST" 
+            id="contactForm" 
+            novalidate>
+            
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="3214045a-3edd-49b9-a5e6-3ed54d7e47ca">
+            
+            <!-- Honeypot Field (Anti-Spam) -->
+            <input type="text" name="honeypot" style="display: none;" tabindex="-1">
+
+            <!-- Redirect URL -->
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+            <div class="row">
+                <!-- Name Field -->
+                <div class="col-lg-6 mb-3">
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        name="name" 
+                        placeholder="Your Name" 
+                        required 
+                        aria-label="Your Name">
+                </div>
+
+                <!-- Email Field -->
+                <div class="col-lg-6 mb-3">
+                    <input 
+                        type="email" 
+                        class="form-control" 
+                        name="email" 
+                        placeholder="Your Email" 
+                        required 
+                        aria-label="Your Email">
+                </div>
+
+                <!-- Subject Field -->
+                <div class="col-12 mb-3">
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        name="subject" 
+                        placeholder="Subject" 
+                        required 
+                        aria-label="Subject">
+                </div>
+
+                <!-- Message Field -->
+                <div class="col-12 mb-3">
+                    <textarea 
+                        class="form-control" 
+                        name="message" 
+                        placeholder="Your Message" 
+                        rows="5" 
+                        required 
+                        aria-label="Your Message"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-12 text-center">
+                    <button 
+                        type="submit" 
+                        class="btn btn-primary">
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- WhatsApp Click-to-Chat Button -->
+<a href="https://wa.me/254717754487" class="whatsapp-button" target="_blank" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- WhatsApp Popup Message -->
+<div id="whatsappPopup" class="whatsapp-popup">
+    <i class="fab fa-whatsapp"></i> Chat <br>with <br>us!!😊👋 
+</div>
+
+<footer id="footer" class="py-4">
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-start text-md-start text-center">
+            <!-- Quick Links -->
+            <div class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#deals">Deals</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="footer-section contact-info">
+                <h4>Contact Info</h4>
+                <ul class="list-unstyled">
+                    <li><strong>Email:</strong> support@NovaColabstechnologies.com</li>
+                    <li><strong>Phone:</strong> +254717754487</li>
+                </ul>
+            </div>  
+            <!-- Social Media Links -->
+            <div class="footer-section social-icons">
+                <h4>Follow Us</h4>
+                <a href="https://facebook.com" class="icon-size"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" class="icon-size"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" class="icon-size"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com" class="icon-size"><i class="fab fa-instagram"></i></a>
+            </div>         
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+            <p>&copy; 2024 NovaColabs Web solutions. All Rights Reserved.</p>
+            <p>Designed by <a href="#">NovaColabs Technologies</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script> <!-- Ensure Bootstrap JS is included -->
+<script src="js/jquery.min.js" defer></script>
+<script src="js/owl.carousel.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<!-- Add ScrollReveal library -->
+<script src="https://unpkg.com/scrollreveal" defer></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Ensure the bounce animation happens only once on page load
+    const elements = document.querySelectorAll('.bounce');
+    elements.forEach(element => {
+      element.classList.add('bounce-once');
+    });
+
+    // Toggle menu for mobile view
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('nav-links');
+    menuBtn.addEventListener('click', function() {
+      navLinks.classList.toggle('show');
+    });
+
+    // Ensure animations happen once on scroll down
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-in, .zoom-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animatedElements.forEach(element => {
+      observer.observe(element);
+    });
+
+    // ScrollReveal animations
+    const scrollRevealOption = {
+      distance: "50px",
+      origin: "bottom",
+      duration: 700, // Reduced duration for faster animations
+    };
+
+    ScrollReveal().reveal(".hero__content h1", {
+      ...scrollRevealOption,
+      delay: 300,
+    });
+    ScrollReveal().reveal(".hero__content p", {
+      ...scrollRevealOption,
+      delay: 600,
+    });
+    ScrollReveal().reveal(".hero__content a", {
+      ...scrollRevealOption,
+      delay: 900,
+    });
+    ScrollReveal().reveal(".hero__image .image", {
+      ...scrollRevealOption,
+      origin: "right",
+      delay: 1200,
+    });
+
+    ScrollReveal().reveal("#benefits .section-title", {
+      ...scrollRevealOption,
+      delay: 300,
+    });
+    ScrollReveal().reveal("#benefits .col-md-4", {
+      ...scrollRevealOption,
+      delay: 600,
+      interval: 300,
+    });
+
+    ScrollReveal().reveal("#deals .section-title", {
+      ...scrollRevealOption,
+      delay: 300,
+    });
+    ScrollReveal().reveal("#deals .deal-item", {
+      ...scrollRevealOption,
+      delay: 600,
+      interval: 300,
+    });
+
+    ScrollReveal().reveal("#services .section-title", {
+      ...scrollRevealOption,
+      delay: 300,
+    });
+    ScrollReveal().reveal("#services .service-item", {
+      ...scrollRevealOption,
+      delay: 600,
+      interval: 300,
+    });
+
+    ScrollReveal().reveal("#portfolio .section-title", {
+      ...scrollRevealOption,
+      delay: 300,
+    });
+    ScrollReveal().reveal("#portfolio .portfolio-item", {
+      ...scrollRevealOption,
+      delay: 600,
+      interval: 300,
+    });
+
+    ScrollReveal().reveal("#testimonials .section-title", {
+      ...scrollRevealOption,
+      delay: 300,
+    });
+    ScrollReveal().reveal("#testimonials .testimonial-item", {
+      ...scrollRevealOption,
+      delay: 600,
+      interval: 300,
+    });
+
+    ScrollReveal().reveal("#about h2", {
+      ...scrollRevealOption,
+      delay: 300,
+    });
+    ScrollReveal().reveal("#about p", {
+      ...scrollRevealOption,
+      delay: 600,
+    });
+
+    ScrollReveal().reveal("#blog .section-title", {
+      ...scrollRevealOption,
+      delay: 300,
+    });
+    ScrollReveal().reveal("#blog .blog-item", {
+      ...scrollRevealOption,
+      delay: 600,
+      interval: 300,
+    });
+
+    ScrollReveal().reveal("#faqs .section-title", {
+      ...scrollRevealOption,
+      delay: 300,
+    });
+    ScrollReveal().reveal("#faqs .accordion-item", {
+      ...scrollRevealOption,
+      delay: 600,
+      interval: 300,
+    });
+
+    ScrollReveal().reveal("#contact .section-title", {
+      ...scrollRevealOption,
+      delay: 300,
+    });
+    ScrollReveal().reveal("#contact form", {
+      ...scrollRevealOption,
+      delay: 600,
+    });
+
+    // FAQ section toggle functionality
+    const faqButtons = document.querySelectorAll('.accordion-button');
+    faqButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const target = document.querySelector(this.getAttribute('data-bs-target'));
+        const isCollapsed = target.classList.contains('show');
+        if (isCollapsed) {
+          target.classList.remove('show');
+        } else {
+          document.querySelectorAll('.accordion-collapse').forEach(collapse => {
+            collapse.classList.remove('show');
+          });
+          target.classList.add('show');
+        }
+      });
+    });
+
+    // Contact form submission handling
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent default form submission
+        const form = e.target;
+
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+        })
+        .then(() => {
+            form.reset(); // Clear the form
+            showPopupMessage("Success! Your message has been sent.", "success"); // Show success message
+        })
+       
+    });
+
+    // Show WhatsApp popup message regularly
+    const whatsappPopup = document.getElementById('whatsappPopup');
+    setInterval(() => {
+        whatsappPopup.classList.add('show');
+        setTimeout(() => {
+            whatsappPopup.classList.remove('show');
+        }, 3000);
+    }, 10000); // Show every 10 seconds
+
+    // Function to show popup message
+    function showPopupMessage(message, type) {
+        const popup = document.createElement('div');
+        popup.className = `popup-message ${type} show`;
+        popup.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i> ${message}`;
+        document.body.appendChild(popup);
+        setTimeout(() => {
+            popup.classList.remove('show');
+            popup.classList.add('hide');
+            setTimeout(() => {
+                document.body.removeChild(popup);
+            }, 300);
+        }, 3000);
+    }
+  });
+</script>
+</body>
+</html>

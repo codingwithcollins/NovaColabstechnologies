@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Services, Web Development, UI/UX Design">
+    <meta name="description" content="NovaColabs - Our Services. We offer top-notch services to boost your digital presence.">
+    <meta name="author" content="NovaColabs">
+    <title>Services - NovaColabs Web Solutions</title>
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="nav">
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="index.html" class="logo" aria-label="NovaColabs Logo">
+                    <img src="images/logo.png" alt="NovaColabs Logo" style="width: 140px; height: auto;">
+                </a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a class="btn primary-btn" href="index.html#contact" aria-label="Get in Touch Button">Get in Touch</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="services" class="services py-5 zoom-in">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Our Services</h2>
+            <p>We offer top-notch services to boost your digital presence.</p>
+        </div>
+        <div class="row">
+            <!-- Web Development -->
+            <div class="service-item d-flex align-items-center">
+                <div class="text-content">
+                    <h3>Web Development</h3>
+                    <p>Build dynamic, responsive websites tailored to your needs.</p>
+                    <a href="index.html#contact" class="btn">Learn More</a>
+                </div>
+                <div class="image-content">
+                    <img src="images/web-development.jpeg" alt="Web Development" class="img-fluid">
+                </div>
+            </div>
+            <!-- Digital Marketing -->
+            <div class="service-item d-flex align-items-center flex-row-reverse">
+                <div class="text-content">
+                    <h3>Digital Marketing</h3>
+                    <p>Boost your brand visibility with targeted strategies.</p>
+                    <a href="index.html#contact" class="btn">Explore Options</a>
+                </div>
+                <div class="image-content">
+                    <img src="images/digital-marketing.jpg" alt="Digital Marketing" class="img-fluid">
+                </div>
+            </div>
+            <!-- UI/UX Design -->
+            <div class="service-item d-flex align-items-center">
+                <div class="text-content">
+                    <h3>UI/UX Design</h3>
+                    <p>Deliver seamless and engaging experiences to your users.</p>
+                    <a href="index.html#contact" class="btn">Get Started</a>
+                </div>
+                <div class="image-content">
+                    <img src="images/ui-ux-design.jpg" alt="UI/UX Design" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="py-4">
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-start text-md-start text-center">
+            <!-- Quick Links -->
+            <div class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul class="list-unstyled">
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="index.html#deals">Deals</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="footer-section contact-info">
+                <h4>Contact Info</h4>
+                <ul class="list-unstyled">
+                    <li><strong>Email:</strong> support@NovaColabsWebsolutions.com</li>
+                    <li><strong>Phone:</strong> +254717754487</li>
+                </ul>
+            </div>           
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+            <p>&copy; 2024 NovaColabs Web solutions. All Rights Reserved.</p>
+            <p>Designed by <a href="#">NovaColabs Web solutions</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    // Ensure the bounce animation happens only once on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.bounce');
+        elements.forEach(element => {
+            element.classList.add('bounce-once');
+        });
+
+        // Toggle menu for mobile view
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        menuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
+
+        // Ensure animations happen once on scroll down
+        const animatedElements = document.querySelectorAll('.fade-in, .slide-in, .zoom-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+</script>
+</body>
+</html>
