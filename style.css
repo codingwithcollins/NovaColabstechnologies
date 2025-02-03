@@ -25,9 +25,111 @@ a {
     color: inherit;
 }
 /* Hide Navbar Toggler on Large Devices */
+
+
+/*particles  */
+#particle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(231, 71, 71, 0.7);
+    border-radius: 50%;
+    animation: float 5s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-100px) rotate(180deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+
+/*contact Success Message Styles */
+.success-message {
+    background: linear-gradient(145deg, #4CAF50, #388E3C); /* Gradient for modern feel */
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Success Text */
+.success-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Go Back Button */
+#goBackBtn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+}
+
+#goBackBtn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Button Focused */
+#goBackBtn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
 /* Responsive Design for Our Deals, Contact Us, and Footer */
 @media (max-width: 768px) {
-    #deals .row > div,
+   
     #contact .row > div,
     #footer .row > div {
         flex: 0 0 100%;
@@ -668,88 +770,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Deals Section */
-.deals-section {
-    background-color: #f7f7f7;
-    padding: 80px 15px;
-    text-align: center;
-}
-
-.deals-section .section-title h2 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.deals-section .section-title p {
-    font-size: 18px;
-    color: #7f8c8d;
-}
-
-.deals-section .deal-item {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    transition: transform 0.3s ease;
-}
-
-.deals-section .deal-item:hover {
-    transform: translateY(-10px);
-}
-
-.deals-section .deal-item h3 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.deals-section .deal-item p {
-    font-size: 16px;
-    color: #7f8c8d;
-    margin-bottom: 20px;
-}
-
-.deals-section .deal-item .btn {
-    padding: 10px 20px;
-    background-color: #2bfc2b;
-    color: #fff;
-    font-weight: 600;
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
-}
-
-.deals-section .deal-item .btn:hover {
-    background-color: #e61624;
-}
-
-/* Layout for the Deals Section */
-.deals-section .row {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.deals-section .col-md-4 {
-    width: 100%;
-    max-width: 320px;
-}
-
-@media (min-width: 768px) {
-    .deals-section .col-md-4 {
-        width: 30%;
-    }
-}
-
-/* Our Deals Section Responsive Fix */
-@media (max-width: 768px) {
-    #deals .deal-item {
-        margin-bottom: 20px;
-        text-align: center;
-    }
-}
 
 
 /* Services Section */
@@ -812,10 +832,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-item .image-content img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Makes the image responsive */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensures images are cropped to fit the container while maintaining aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
 }
+
 
 @media (min-width: 992px) {
     .service-item .image-content img {
