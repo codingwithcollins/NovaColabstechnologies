@@ -159,7 +159,113 @@ a.btn:hover {
         font-size: 0.8rem;
     }
 }
+/* oval image and arrows*/
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+}
 
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.arrow {
+    width: 180px; /* Adjust size */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow-right {
+    right: -120px;
+}
+
+.arrow-left {
+    left: -120px;
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Stack timeline items vertically and center them on smaller screens */
+    .timeline {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the timeline */
+        padding: 20px; /* Optional: Add padding to keep content away from edges */
+    }
+
+    .timeline-item {
+        width: 100%; /* Full width for each item */
+        text-align: center; /* Center text */
+        left: 0;
+        margin-bottom: 30px; /* Add spacing between items */
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Adjust timeline content for smaller screens */
+    .timeline-content {
+        padding: 15px;
+    }
+
+    /* Hide arrows on smaller screens */
+    .arrow {
+        display: none;
+    }
+
+    /* Adjust step circles for smaller devices */
+    .step-circle {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    /* Ensure the left and right classes have no margins on small screens */
+    .timeline-item.left,
+    .timeline-item.right {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
     </style>
 </head>
 <body>
@@ -249,32 +355,50 @@ a.btn:hover {
     </div>
 </section>
 
+<!-- Process Section -->
+<section id="why-choose-us" class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="fw-bold">Why Choose NovaCoLabs?</h2>
+        <p class="text-muted">We take a structured approach to innovation and technology.</p>
 
-
-
-
-<!-- Why Choose Us Section -->
-<section id="why-choose-us" class="py-5 bg-light fade-in">
-    <div class="container">
-        <div class="section-title text-center mb-5">
-            <h2>Why Choose Us?</h2>
-            <p>At NovaColabs, we don’t just create; we innovate, elevate, and transform. Whether it’s designing user-centric products or engineering scalable software, we’re committed to driving success for our clients.</p>
-        </div>
-        <div class="row">
-            <div class="col-md-4 text-center mb-4">
-                <i class="fas fa-lightbulb fa-3x text-warning mb-3"></i> <!-- Changed to yellow -->
-                <h5>Innovative Solutions</h5>
-                <p>We bring fresh ideas and innovative solutions to every project, ensuring your business stays ahead of the curve.</p>
+        <div class="timeline">
+            <!-- Step 1 -->
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="step-circle">1</div>
+                    <h5>Discovery</h5>
+                    <p>Understanding your business needs and market trends.</p>
+                </div>
+                <img src="images/arrow-right-down.png" alt="Arrow Right" class="arrow arrow-right">
             </div>
-            <div class="col-md-4 text-center mb-4">
-                <i class="fas fa-users fa-3x text-info mb-3"></i> <!-- Changed to blue -->
-                <h5>User-Centric Design</h5>
-                <p>Our designs are focused on providing the best user experience, making your products more engaging and effective.</p>
+
+            <!-- Step 2 -->
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="step-circle">2</div>
+                    <h5>Design</h5>
+                    <p>Crafting intuitive and engaging user experiences.</p>
+                </div>
+                <img src="images/arrow-left-down.png" alt="Arrow Left" class="arrow arrow-left">
             </div>
-            <div class="col-md-4 text-center mb-4">
-                <i class="fas fa-cogs fa-3x text-success mb-3"></i> <!-- Changed to green -->
-                <h5>Scalable Engineering</h5>
-                <p>We build scalable and robust software solutions that grow with your business, ensuring long-term success.</p>
+
+            <!-- Step 3 -->
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="step-circle">3</div>
+                    <h5>Development</h5>
+                    <p>Building scalable, secure, and efficient software.</p>
+                </div>
+                <img src="images/arrow-right-down.png" alt="Arrow Right" class="arrow arrow-right">
+            </div>
+
+            <!-- Step 4 -->
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="step-circle">4</div>
+                    <h5>Deployment</h5>
+                    <p>Ensuring seamless launch and continuous improvements.</p>
+                </div>
             </div>
         </div>
     </div>
