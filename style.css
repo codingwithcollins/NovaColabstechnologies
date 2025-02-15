@@ -156,17 +156,19 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2rem;
     background-color: #fff;
 }
+
 
 .nav__header {
     display: flex;
     align-items: center;
+    gap: 1.5rem; /* Ensures spacing between logo & menu button */
 }
 
 .nav__logo img {
-    max-height: 50px;
+    max-height: 80px;
     width: auto;
 }
 
@@ -177,13 +179,20 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-dark); /* Ensure the icon is visible */
 }
 
+
+
+/* Center Nav Links */
 .nav__links {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
-    transition: transform 0.3s ease-in-out;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Allows links to take up available space */
+    padding: 0;
 }
 
+/* Styling for Links */
 .nav__links li {
     display: inline-block;
 }
@@ -194,6 +203,22 @@ h1, h2, h3, h4, h5, h6 {
     color: #333;
     padding: 0.5rem 0;
     transition: color 0.3s ease;
+}
+
+/* Get in Touch Button Fix */
+.nav__links .btn {
+    background: #ff0000;
+    color: #fff;
+    padding: 0.6rem 1.5rem; /* Increased padding for better appearance */
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: auto; /* Pushes button to the right */
+    transition: background 0.3s ease-in-out;
+}
+
+.nav__links .btn:hover {
+    background: #cc0000;
 }
 
 
